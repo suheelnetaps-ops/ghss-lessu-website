@@ -1,39 +1,48 @@
-// ===============================
-// GHSS Lessu Website
-// ===============================
+const header = document.querySelector("header");
+const slides = Array.from(document.querySelectorAll(".hero-slide"));
+const year = document.getElementById("year");
 
-// Smooth scrolling for navigation
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
 
-        const target = document.querySelector(this.getAttribute('href'));
-
-        if (target) {
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    });
+window.addEventListener("scroll", () => {
+  header.classList.toggle("scrolled", window.scrollY > 20);
 });
 
-// Fade in sections on scroll
-const sections = document.querySelectorAll("section");
+document.querySelectorAll('.nav-links a, .logo').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetId = link.getAttribute("href");
+    if (!targetId || !targetId.startsWith("#")) {
+      return;
+    }
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-},{
-    threshold:0.2
+    const target = document.querySelector(targetId);
+    if (target) {
+      event.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
 });
 
-sections.forEach(section=>{
-    section.style.opacity=0;
-    section.style.transform="translateY(50px)";
-    section.style.transition="1s";
-    observer.observe(section);
-});
+let currentSlide = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, slideIndex) => {
+    slide.classList.toggle("active", slideIndex === index);
+  });
+}
+
+function startSlider() {
+  if (!slides.length) {
+    return;
+  }
+
+  showSlide(currentSlide);
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, 5000);
+}
+
+startSlider();
