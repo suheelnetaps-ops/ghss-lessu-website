@@ -119,27 +119,32 @@ header.scrolled {
   inset: 0;
 }
 
-.hero-slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  background-size: cover;
-  background-position: center;
-  transform: scale(1.04);
-  transition: opacity 1s ease, transform 1s ease;
+.hero-slide{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    transform:scale(1);
+    transition:
+        opacity 1.2s ease,
+        transform 8s ease;
 }
 
-.hero-slide.active {
-  opacity: 1;
-  transform: scale(1);
+.hero-slide.active{
+    opacity:1;
+    transform:scale(1.12);
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(7, 33, 61, 0.9), rgba(7, 33, 61, 0.35));
-  z-index: 1;
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.45)
+    );
+    z-index:1;
 }
 
 .hero-content {
@@ -194,8 +199,12 @@ header.scrolled {
   border-radius: 999px;
   font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:.35s;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
-
+.btn:hover{
+    transform:translateY(-4px);
+}
 .btn:hover {
   transform: translateY(-2px);
 }
@@ -633,10 +642,41 @@ grid-template-columns:1fr;
 }
 
 .icon{
-    font-size:55px;
-    margin-bottom:20px;
-}
 
+width:90px;
+
+height:90px;
+
+margin:auto;
+
+margin-bottom:25px;
+
+background:#0B3D91;
+
+color:white;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:36px;
+
+transition:.35s;
+
+}
+.academic-card:hover .icon{
+
+background:#FFC107;
+
+color:#0B3D91;
+
+transform:rotate(360deg);
+
+}
 .academic-card h3{
     color:#0B3D91;
     margin-bottom:12px;
