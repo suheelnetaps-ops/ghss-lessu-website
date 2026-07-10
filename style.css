@@ -433,4 +433,275 @@ footer {
 
 .top-container span{
     font-weight:500;
+}/* ===========================
+   PRINCIPAL'S DESK
+=========================== */
+
+.principal-section{
+    display:grid;
+    grid-template-columns:350px 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.principal-image img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 20px 50px rgba(0,0,0,.18);
+    border:6px solid white;
+    transition:0.4s;
+}
+
+.principal-image img:hover{
+    transform:scale(1.03);
+}
+
+.principal-content h3{
+    margin-top:20px;
+    color:#0B3D91;
+    font-size:30px;
+}
+
+.designation{
+    display:inline-block;
+    color:#FFC107;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.principal-content p{
+    line-height:1.9;
+    color:#555;
+    margin-bottom:18px;
+}
+
+@media(max-width:900px){
+
+.principal-section{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.principal-image{
+
+max-width:320px;
+
+margin:auto;
+
+}
+
+}/* ===========================
+   SCHOOL STATISTICS
+=========================== */
+
+.stats-section{
+
+    background:#0B3D91;
+
+    color:white;
+
+    padding:80px 20px;
+
+    text-align:center;
+
+}
+
+.stats-section h2{
+
+    color:white;
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+.stats-subtitle{
+
+    color:#d9e6ff;
+
+    margin-bottom:60px;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:white;
+
+    color:#0B3D91;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    transition:.35s;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.stat-card h3{
+
+    font-size:42px;
+
+    color:#FFC107;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+@media(max-width:900px){
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}/* ===========================
+   ACADEMIC STREAMS
+=========================== */
+
+.academics-section{
+    padding:100px 20px;
+    background:#f8fbff;
+    text-align:center;
+}
+
+.section-description{
+    max-width:750px;
+    margin:20px auto 60px;
+    color:#666;
+    line-height:1.8;
+}
+
+.academics-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
+}
+
+.academic-card{
+    background:white;
+    padding:40px 30px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.academic-card:hover{
+    transform:translateY(-12px);
+}
+
+.icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.academic-card h3{
+    color:#0B3D91;
+    margin-bottom:12px;
+}
+
+.academic-card p{
+    color:#666;
+} /* ===========================
+   NOTICE BOARD
+=========================== */
+
+.notice-section{
+    padding:100px 20px;
+    background:#ffffff;
+    text-align:center;
+}
+
+.notice-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.notice-card{
+    background:#f8fbff;
+    border-left:6px solid #FFC107;
+    padding:30px;
+    border-radius:18px;
+    text-align:left;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.notice-card:hover{
+    transform:translateY(-8px);
+}
+
+.notice-date{
+    display:inline-block;
+    background:#0B3D91;
+    color:white;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.notice-card h3{
+    color:#0B3D91;
+    margin-bottom:15px;
+}
+
+.notice-card p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.notice-card a{
+    color:#0B3D91;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.notice-card a:hover{
+    color:#FFC107;
 }
