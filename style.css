@@ -297,7 +297,25 @@ h2 {
   display: grid;
   gap: 0.9rem;
 }
+.principal-title{
 
+color:#0B3D91;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+.welcome-card h4{
+
+font-size:24px;
+
+margin-top:10px;
+
+color:#FFC107;
+
+}
 .notice-item {
   padding: 1rem 1.1rem;
   border-left: 4px solid var(--accent);
@@ -388,4 +406,31 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+.gold-text{
+    color:#FFC107;
+    letter-spacing:4px;
+    text-shadow:0 2px 12px rgba(0,0,0,.35);
+}
+/* ===== TOP BAR ===== */
 
+.top-bar{
+    background:#0B3D91;
+    color:white;
+    font-size:14px;
+    padding:8px 0;
+}
+
+.top-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.top-container span{
+    font-weight:500;
+}
