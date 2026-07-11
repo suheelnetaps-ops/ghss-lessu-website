@@ -1182,4 +1182,90 @@ text-align:center;
 
 }
 
+}/* ===========================
+   PAGE HERO
+=========================== */
+
+.page-hero{
+    background:
+        linear-gradient(rgba(11,61,145,.75),
+        rgba(11,61,145,.75)),
+        url("images/photo1.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    padding:180px 20px 120px;
+
+    text-align:center;
+    color:white;
+}
+
+.page-hero h1{
+
+    font-size:clamp(38px,6vw,64px);
+
+    margin-bottom:20px;
+
+    font-weight:800;
+
+}
+
+.page-hero p{
+
+    font-size:22px;
+
+    margin-bottom:25px;
+
+}
+
+.breadcrumb{
+
+    font-size:16px;
+
+}
+
+.breadcrumb a{
+
+    color:#FFC107;
+
+    text-decoration:none;
+
+}
+
+.breadcrumb span{
+
+    color:white;
+
+}/* ===========================
+   HISTORY SECTION
+=========================== */
+
+.history-content{
+
+max-width:900px;
+
+margin:auto;
+
+font-size:18px;
+
+line-height:2;
+
+color:#555;
+
+}
+
+.history-content p{
+
+margin-bottom:25px;
+
+text-align:justify;
+
+}
+.about-card i{
+
+    color:#0B3D91;
+
+    margin-bottom:20px;
+
 }
