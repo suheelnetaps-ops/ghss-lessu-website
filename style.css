@@ -1268,4 +1268,54 @@ text-align:justify;
 
     margin-bottom:20px;
 
+}.subject-list{
+
+    margin-top:15px;
+
+    padding-left:20px;
+
+    text-align:left;
+
+}
+
+.subject-list li{
+
+    margin-bottom:8px;
+
+    color:#555;
+
+    list-style:disc;
+
+}
+
+.academic-card h4{
+
+    margin-top:20px;
+
+    color:#0B3D91;
+
+    font-size:16px;
+
+}
+.subject-list{
+    list-style:none;
+    padding:0;
+    margin-top:15px;
+}
+
+.subject-list li{
+    margin-bottom:8px;
+    color:#555;
+}
+
+.subject-list i{
+    color:#0B3D91;
+    margin-right:8px;
+}
+
+.academic-card h4{
+    margin-top:18px;
+    margin-bottom:10px;
+    color:#0B3D91;
+    font-size:16px;
 }
